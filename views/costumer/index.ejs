@@ -1,0 +1,20 @@
+<h3>Costumers</h3>
+Lista defsdfsdfs WWWWWW
+<table>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+
+<% _.each(costumers, function (costumer){ %>
+<tr data-id="<%= costumer.id %>" data-model="costumer">
+<td><%=costumer.id %></td>
+<td><%=costumer.name %></td>
+<td><%=costumer.email %></td>
+</tr>
+<% }) %>
+</table>
