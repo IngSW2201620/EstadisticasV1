@@ -33,11 +33,13 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage',
-    'post /index': 'costumerContoller.index'
+    'post /index': 'costumerController.index'
 
-
-  }
-
+  },
+  '/costumer/get' : 'costumerController.get',
+  '/roles/get' : 'RoleController.get',
+  '/costumer/role/get/:name' : 'costumerController.getRoles',
+  '/role/costumer/get/:name' :  'roleController.getCostumers' 
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

@@ -6,31 +6,16 @@
  */
 
 module.exports = {
-
+autoPK: false,
   attributes: {
-  	id: {
-      type: 'int',
-      primaryKey: true
-    },
-
-    nombre: {
-  		type: 'string'
-  	},
-  	
-    email:{
-  		type:'string',
-  		email:true
-  	},
-  	estado:{
-  		type:'string'
-  	},
-
-rutas: {
-  collection: 'ruta',
-  via: 'owners',
-  dominant: true
-}
-
+    costumerid: {type: 'integer', primaryKey: true},
+  	nombre: {type: 'string'},
+    email:{type:'string', email:true},
+  	estado:{type:'string'},
+    roles: {
+      collection: "role",
+      through: "costumerrole"
+    }
   }
 
 };
